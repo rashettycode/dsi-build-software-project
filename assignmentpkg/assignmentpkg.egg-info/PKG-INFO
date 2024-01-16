@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: assignmentpkg
+Version: 0.1.0
+Summary: A package for analyzing data from the NYT API
+Author: Kevin, Rahul, S, A
+Requires-Python: >=3.6
+Requires-Dist: requests
+Requires-Dist: PyYAML
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: matplotlib
