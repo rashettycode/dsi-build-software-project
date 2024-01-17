@@ -1,1 +1,8 @@
-data_path: /path/to/data
+api_settings:
+  api_key: "1ZhrKoaow3FeAZwoPXCHNPpq0LTKjK4G"
+  base_url: "https://api.nytimes.com/svc/search/v2/articlesearch.json"
+topic: "artificial intelligence"
+
+
+
+

@@ -1,2 +1,8 @@
-url: "https://api.github.com/users?q=followers>10000"
-token: "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"
+api_settings:
+  api_key: "1ZhrKoaow3FeAZwoPXCHNPpq0LTKjK4G"
+  base_url: "https://api.nytimes.com/svc/search/v2/articlesearch.json"
+  topic: "artificial intelligence"
+
+general_settings:
+  cache_timeout: 3600  # in seconds
+  max_articles: 100

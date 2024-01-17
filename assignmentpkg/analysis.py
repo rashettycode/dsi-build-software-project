@@ -1,16 +1,31 @@
+from typing import Any, Optional
+import argparse
 import yaml
 import requests
-import numpy as np
-from scipy import stats
 import matplotlib.pyplot as plt
 
 class Analysis:
     def __init__(self, config_path):
+        # Load the configuration file
         with open(config_path, 'r') as file:
             self.config = yaml.safe_load(file)
-        topic = self.config["topic"]
-        api_key = self.config["api_key"]
-        self.url = f"{self.config['url']}articlesearch.json?q={topic}&api-key={api_key}"
+
+        # Print the loaded configuration for debugging
+        print("Loaded configuration:")
+        print(self.config)
+
+        # Access the keys in the configuration dictionary
+        api_settings = self.config.get("api_settings", {})
+
+        api_key = api_settings.get("api_key")
+        topic = api_settings.get("topic")
+
+        if api_key is None or topic is None:
+            raise KeyError("API key or topic not found in the configuration file.")
+
+        base_url = api_settings.get("base_url", "")
+
+        self.url = f"{base_url}?q={topic}&api-key={api_key}"
         self.data = None
 
     def load_data(self):

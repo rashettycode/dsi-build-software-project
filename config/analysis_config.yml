@@ -1,1 +1,6 @@
-figure_caption: NY Analysis
+aanalysis_settings:
+  date_range: "2024-01-01 to 2024-01-14"
+  keywords: ["artificial intelligence", "science"]
+  detail_level: "basic"
+
+
